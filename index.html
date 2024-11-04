@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.ico">
+    <title>Generali</title>
+</head>
+<body>
+    <div class="space_top"></div>
+    <div class="glavni">
+        <div class="header">
+            <img id="img_header" src="generali-logo.svg" alt="generali-logo">
+            <p id="p_header">
+                <b>GENERALI zavarovalnica d.d.</b><br>
+                Križičeva ulica 3, Sl - 1000 Ljubljana <br>
+                T +386(0)1 47 57 100, 080 70 77 <br>
+                info.si@generali.com <br><br>
+                <b>generali.si</b>
+            </p>
+        </div>
+        <h3>ZAHTEVEK ZA ENOSTAVNE SPREMEMBE ZAVAROVALNE POLICE</h3>
+        <form action="" id="form" method="get">
+            <div class="message">
+                <p id="message_zavarovanec"></p>
+            </div>
+            <div class="group">                
+                <label for="zavarovanec">Spodaj podpisani - zavarovanec <p class="zvezdica"> *</p></label>
+                <input type="text" id="zavarovanec" class="input-field">
+            </div>  
+            <div class="message">
+                <p id="message_sklenitelj"></p>
+            </div>
+            <div class="group">
+                <label for="naslov_sklenitelja">Naslov sklenitelja zavarovanja<p class="zvezdica"> *</p></label>
+                <input type="text" id="naslov_sklenitelja" class="input-field">
+            </div>
+            <div class="message">
+                <p id="message_tel"></p>
+            </div>    
+            <div class="group">
+                <label for="tel_stevilka">Kontaktna telefonska številka<p class="zvezdica"> *</p></label>
+                <input type="number" id="tel_stevilka" class="input-field">
+            </div>   
+            <div class="message">
+                <p id="message_mail"></p>
+            </div> 
+            <div class="group">
+                <label for="e-posta">E-poštni naslov<p class="zvezdica"> *</p></label>
+                <input type="text" id="e-posta" class="input-field">
+            </div>  
+            <div class="message">
+                <p id="message_davcna"></p>
+            </div> 
+            <div class="group">
+                <label for="davcna_st">Davčna številka zavarovanca<p class="zvezdica"> *</p></label>
+                <input type="number" id="davcna_st" class="input-field">
+            </div>
+            <div class="message">
+                <p id="message_polica"></p>
+            </div>
+            <div class="group">
+                <label for="st_police">Številka police<p class="zvezdica"> *</p></label>
+                <input type="number" id="st_police" class="input-field">
+            </div>
+            <div class="message">
+                <p id="message_vrsta"></p>
+            </div>
+            <div class="group">
+                <label for="vrsta_zavarovanja">Vrsta zavarovanja<p class="zvezdica"> *</p></label>
+                <input type="text" id="vrsta_zavarovanja" class="input-field">
+            </div>
+            <p id="p_datum">Od dne <input type="date" name="datum" id="datum"> prosim za naslednje spremembe.</p>
+            <div class="list">                
+                <div class="group1">
+                    <label>1. Nov naslov sklenitelja zavarovanja</label>
+                    <input type="text" name="naslov" class="input1" id="nov_naslov">
+                </div>        
+                <div class="group1">
+                    <label>2. Sprememba plačila na</label>
+                    <div class="radio_div">
+                        <label class="radio">
+                            <input type="radio" value="letno" name="letno"> letno
+                        </label>
+                        <label class="radio">
+                            <input type="radio" value="polletno" name="letno"> polletno
+                        </label>
+                        <label class="radio">
+                            <input type="radio" value="četrtletno" name="letno"> četrtletno
+                        </label>
+                        <label class="radio">
+                            <input type="radio" value="mesečno" name="letno"> mesečno
+                        </label>
+                    </div>
+                </div>       
+                <div class="group1">
+                    <label>3. Sprememba načina plačila</label>
+                    <div class="radio_div">
+                        <label class="radio">
+                            <input type="radio" value="položnica" name="nacin"> UPN (položnica)
+                        </label>
+                        <label class="radio">
+                            <input type="radio" value="trajni nalog" name="nacin"> SSD (trajni nalog)
+                        </label>
+                    </div>
+                </div>       
+                <div class="group1">
+                    <label>4. Sprememba višine premije</label>
+                    <input type="text" name="visina_premije" class="input1" id="visina_premije">
+                </div>        
+                <div class="group1">
+                    <label>5. Sprememba upravičenca</label>
+                    <div class="radio_div">
+                        <label class="radio">
+                            <input type="radio" value="dozivetje" name="dozivetje"> v primeru doživetja
+                        </label>
+                        <label class="radio">
+                            <input type="radio" value="smrt" name="dozivetje"> v primeru smrti
+                        </label>
+                    </div>
+                </div>
+            </div>   
+            <div class="tabela">
+                <table>
+                    <tr>
+                        <td>Upravičenci (ime/ priimek)</td>
+                        <td width="5%">%</td>
+                        <td >EMŠO</td>
+                        <td width="35%">Naslov</td>
+                        <td width="20%">Davčna številka</td>
+                        <td>Preklicno/ne preklicno</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number"></td>
+                        <td><input type="text"></td>
+                        <td><input type="number"></td>
+                        <td>
+                            <div class="radio_div">
+                                <label class="radio_p">
+                                    <input type="radio" value="P" name="p">P
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" value="N" name="p" >N
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="number"></td>
+                        <td><input type="number"></td>
+                        <td><input type="text"></td>
+                        <td><input type="number"></td>
+                        <td>
+                            <div class="radio_div">
+                                <label class="radio_p">
+                                    <input type="radio" value="P" name="n">P
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" value="N" name="n">N
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="list">
+                <div class="group2">
+                    <label class="label6-7">6. Sprememba statusa politično <br> izpostavljene osebe:</label>
+                    <div class="list_input">
+                        <div class="radio_div1">
+                            <label class="radio1">
+                                <input type="radio" name="politicen">nisem več politično izpostavljena oseba
+                            </label>
+                            <label class="radio1">
+                                <input type="radio" name="politicen">postal sem politično izpostavljena oseba
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <label class="label6-7">7. Ostalo / Razlog spremembe</label>
+            <textarea name="ostalo" id="textarea" ></textarea>
+            <p id="tekst">Vsaka fizična oseba, ki deluje ali je v zadnjem letu delovala na vidnem javnem polaožaju ter ima stalno prebivališčče v katerikoli državi članici 
+               ali tretji državi, vključno z njenimi ožjimi družinskimi člani in ožjimi sodelavci. V primeru, da ste se opredelili za
+               politično izpostavljeno osebo, priložite izpolnjen Vprašalnik za politično izpostavljene osebe, ki se nahaja na spletni strani: <br> 
+               <a href="https://www.generali.si/za-stranke/uporabni-dokumenti/" target="_blank">https://www.generali.si/za-stranke/uporabni-dokumenti/</a>
+            </p>
+            <div id="kraj">
+                <label>Kraj in datum:</label>
+                <input type="text" id="kraj_datum">
+                <input type="date" name="datum" id="datum">
+            </div>
+            <div id="podpis">
+                <div id="podpis1">
+                    <label>podpis in orga številka <br> Zastopnika/posrednika:</label>
+                    <canvas id="podpis-canvas"></canvas>
+                    <script src="script.js"></script>
+                </div>
+                <div id="podpis2">
+                    <label id="podpis2_label">podpis postavitelja zahtevka:</label>
+                    <canvas id="podpis2-canvas" ></canvas>
+                </div>
+            </div>
+            <input type="submit" value="POŠLJI" id="submit">
+        </form>
+    </div>
+    <div class="space_bottom"></div>
+</body>
+</html>

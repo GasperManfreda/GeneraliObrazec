@@ -1,0 +1,244 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+.space_top{
+    height: 100px;
+}
+.space_bottom{
+    height: 100px;
+}
+.glavni{
+    padding: 1% 0;
+    background-color: white;
+    border-radius: 40px;
+    margin: 0 auto;
+    width: 900px;
+    box-shadow: rgba(0, 0, 0, 0.25) 20px 30px 50px, rgba(0, 0, 0, 0.22) -20px 30px 50px;
+}
+h3{
+    text-align: center;
+    font-weight: bold;
+    margin:2% 0;
+}
+.group, .group1, .group2 {
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+}
+.group label {
+    margin-left: 5%;
+    width: 60%;           
+    display: inline-block;
+    font-size: 16px;   
+    margin-bottom: 1%;  
+}
+.group .input-field {
+    width: 30%;             
+    display: inline-block;
+    padding: 4px;        
+    box-sizing: border-box;
+    margin-top: -2%;
+}
+.zvezdica{
+    display: inline;
+    color: red;
+}
+.message{
+    padding-left: 72%;
+    font-size: 13px;
+    color: red;
+    
+}
+label{
+    margin-bottom: 3%;
+    margin-left: 3%;
+    display: inline-block;
+    width: 60%;
+}
+
+.input1{
+    height: 20px;
+    width: 100%;
+    margin-bottom: 4%;
+    margin-left: -10%;
+    padding: 0 0 3px 3px;
+}
+.p_n{
+    padding-right: 10px;
+}
+#datum{
+    width: 20%;
+    display: inline;
+    padding: 3px;
+}
+#p_datum{
+    margin-left: 5%;
+}
+.list{
+    margin-top: 3%;
+}
+.list_input{
+    margin-top: -2%;
+    padding-left: 10%;
+}
+.group1{
+    margin-top: -1%;
+    margin-left: 2%;
+}
+.group1 label {
+    width: 60%;           
+    font-size: 16px;
+}
+.radio_p{
+    display: inline-flex; 
+    font-size: 13px;
+    accent-color: rgb(200, 5, 5); 
+    margin-left: 10%;
+    margin-right: 80%;
+}
+.radio{
+    display: inline-flex; 
+    font-size: 13px;
+    accent-color: rgb(200, 5, 5); 
+}
+.radio_div {
+    display: flex;
+    margin-right: 5%;
+    width: 50%;
+}
+.group1 input[type="text"] {
+    margin-left: -9%;
+    width: 35%;
+    padding: 4px;
+    font-size: 16px;
+}
+table, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    margin-left: 5%;
+    width: 90%;
+    
+}
+.tabela input{
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+.radio1{
+    width: 100%;
+    display: inline-flex; 
+    margin-bottom: 1%;
+    accent-color: rgb(200, 5, 5);
+}
+#textarea{
+    width: 90%;
+    height: 100px;
+    margin-left: 5%;
+    resize: none;
+    padding: 5px;
+}
+#tekst{
+    margin: 5%;
+}
+#kraj_datum{
+    display: inline;
+    margin-left: -48%;
+    width: 30%;
+    padding: 3px;
+}
+#kraj{
+    margin-left: 2%;
+}
+#podpis1{
+    width: 45%;
+    display: inline-block;
+}
+canvas{
+    
+    border: 1px solid;
+    display: block;
+   
+}
+#podpis2{
+    width: 45%;
+    display: inline-block;
+}
+#podpis{
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+#podpis2_label{
+    width: 60%;
+    margin-left: 35%;
+}
+#podpis2-canvas{
+    margin-left: 33%;
+}
+#p_header{
+    display: inline-block;
+}
+#img_header{
+    height: 15%;
+    width: 15%;
+}
+.header{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+#submit{
+    margin-left: 45%;
+    height: 40px;
+    width: 90px;
+    border-radius: 10px;
+    border-color: rgb(200, 5, 5);
+    color: rgb(200, 5, 5);  
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+#submit:hover{
+    color: rgb(255,255,255);
+    background-color:  rgb(200, 5, 5) ;   
+}
+input[type="text"], input[type="number"] {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    font-size: 15px;
+}
+input[type="date"]{
+    border: none;
+    font-size: 15px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+.invalid{
+    border-color: red;
+}
+.alert{
+    font-size: 10px;
+}
+.label6-7{
+    margin-left:5%;
+    margin-right: -3%;
+}
+.list .message{
+    width: 20%;
+    margin-bottom: 1%;
+    padding-left: 65%;
+    
+}
+
+
+
