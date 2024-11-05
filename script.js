@@ -141,4 +141,3 @@ function valid_datum(input, message){
         return true;
     }
 }
-
