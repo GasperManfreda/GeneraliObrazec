@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.ico">
     <title>Generali</title>
@@ -71,7 +72,12 @@
                 <label for="vrsta_zavarovanja">Vrsta zavarovanja<p class="zvezdica"> *</p></label>
                 <input type="text" id="vrsta_zavarovanja" class="input-field">
             </div>
-            <p id="p_datum">Od dne <input type="date" name="datum" id="datum"> prosim za naslednje spremembe.</p>
+            <div class="m_datum">
+                <div class="message">
+                    <p id="message_datum"></p>
+                </div>
+            </div>
+            <label id="p_datum">Od dne<p class="zvezdica"> *</p> <input type="date" name="datum" id="datum"> prosim za naslednje spremembe.</label>
             <div class="list">                
                 <div class="group1">
                     <label>1. Nov naslov sklenitelja zavarovanja</label>
@@ -189,10 +195,18 @@
                politično izpostavljeno osebo, priložite izpolnjen Vprašalnik za politično izpostavljene osebe, ki se nahaja na spletni strani: <br> 
                <a href="https://www.generali.si/za-stranke/uporabni-dokumenti/" target="_blank">https://www.generali.si/za-stranke/uporabni-dokumenti/</a>
             </p>
+            
             <div id="kraj">
-                <label>Kraj in datum:</label>
+                <div class="message">
+                    <p id="message_kraj"></p>
+                </div>
+                <div class="message_datum_div">
+                    <p id="message_datum2"></p>
+                </div>
+                <br>
+                <label>Kraj in datum:<p class="zvezdica"> *</p></label>
                 <input type="text" id="kraj_datum">
-                <input type="date" name="datum" id="datum">
+                <input type="date" name="datum" id="datum2">
             </div>
             <div id="podpis">
                 <div id="podpis1">

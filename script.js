@@ -51,13 +51,29 @@ document.getElementById('form').addEventListener('submit', function(e){
     e.preventDefault();
     isEmpty('zavarovanec', 'message_zavarovanec');
     isEmpty('naslov_sklenitelja', 'message_sklenitelj');
-    valid_Tel_stevilka('tel_stevilka', 'message_tel');
+    valid_tel_stevilka('tel_stevilka', 'message_tel');
     valid_email('e-posta', 'message_mail');
     isEmpty('davcna_st', 'message_davcna');
     isEmpty('st_police', 'message_polica');
     isEmpty('vrsta_zavarovanja', 'message_vrsta');
-    
-    
+    valid_datum('datum', 'message_datum');
+    isEmpty('kraj_datum','message_kraj' );
+    valid_datum('datum2', 'message_datum2');
+
+
+    if(isEmpty('zavarovanec', 'message_zavarovanec')&&isEmpty('naslov_sklenitelja', 'message_sklenitelj')&&
+    valid_tel_stevilka('tel_stevilka', 'message_tel')&&valid_email('e-posta', 'message_mail')&&
+    isEmpty('davcna_st', 'message_davcna')&&isEmpty('st_police', 'message_polica')&&
+    isEmpty('vrsta_zavarovanja', 'message_vrsta')&&valid_datum('datum', 'message_datum')&&
+    isEmpty('kraj_datum','message_kraj' )&&valid_datum('datum2', 'message_datum2')){
+        Swal.fire({
+        title: "Zahtevek vspešno oddan!",
+        icon: "success",
+        customClass:{
+            confirmButton: 'ok_button'
+        }
+      });
+    }
 });
 
 function isEmpty(input, message){
@@ -65,26 +81,32 @@ function isEmpty(input, message){
         document.getElementById(input).classList.add('invalid');
         document.getElementById(message).textContent = 'To polje ne sme biti prazno';
         scrollToElement(document.getElementById(input));
+        return false;
     }
     else{
         document.getElementById(input).classList.remove('invalid');
         document.getElementById(message).textContent = '';
+        return true;
     }
 }
-function valid_Tel_stevilka(input, message){
+function valid_tel_stevilka(input, message){
     if(document.getElementById(input).value.trim().length===0){
         document.getElementById(message).textContent = 'To polje ne sme biti prazno';
         document.getElementById(input).classList.add('invalid');
         scrollToElement(document.getElementById(input));
+        return false;
+        
     }
     else if(document.getElementById(input).value.trim().length<9 && document.getElementById(input).value.trim().length>0){
         document.getElementById(input).classList.add('invalid');
         document.getElementById(message).textContent = 'Neveljavna telefonska stevilka';
         scrollToElement(document.getElementById(input));
+        return false;
     }
     else{
         document.getElementById(input).classList.remove('invalid');
         document.getElementById(message).textContent = '';
+        return true;
     }
 }function valid_email(input, message){
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -92,15 +114,31 @@ function valid_Tel_stevilka(input, message){
         document.getElementById(message).textContent = 'To polje ne sme biti prazno';
         document.getElementById(input).classList.add('invalid');
         scrollToElement(document.getElementById(input));
+        return false;
     }
     else if(!emailRegex.test(document.getElementById(input).value)){
         document.getElementById(input).classList.add('invalid');
         document.getElementById(message).textContent = 'Neveljaven e-poštni naslov';
         scrollToElement(document.getElementById(input));
+        return false;
     }
     else{
         document.getElementById(input).classList.remove('invalid');
         document.getElementById(message).textContent = '';
+        return true;
+    }
+}
+function valid_datum(input, message){
+    if(document.getElementById(input).value.trim().length===0){
+        document.getElementById(message).textContent = 'Vnesi usterezen datum';
+        document.getElementById(input).classList.add('invalid');
+        scrollToElement(document.getElementById(input));
+        return false; 
+    }
+    else{
+        document.getElementById(input).classList.remove('invalid');
+        document.getElementById(message).textContent = '';
+        return true;
     }
 }
 
