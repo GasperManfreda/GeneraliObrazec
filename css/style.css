@@ -126,10 +126,12 @@ label{
 table, tr, td{
     border: 1px solid black;
     border-collapse: collapse;
+    padding: 5px;
 }
 table{
     margin-left: 5%;
     width: 90%;
+    
     
 }
 .tabela input{
@@ -192,9 +194,9 @@ canvas{
 #p_header{
     display: inline-block;
 }
-#img_header{
-    height: 15%;
+svg{
     width: 15%;
+    height: 15%;
 }
 .header{
     margin-left: 5%;
@@ -221,7 +223,9 @@ input[type="text"], input[type="number"], input[type="date"] {
     outline: none;
     font-size: 15px;
 }
-
+input[type="number"]{
+    -moz-appearance: textfield;
+}
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -258,6 +262,10 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 13px;
     color: red;
 }
+#credits:hover{
+    cursor: pointer;
+}
+
 
 
 

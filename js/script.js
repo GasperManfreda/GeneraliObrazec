@@ -44,7 +44,16 @@ function scrollToElement(input){
         block: 'end'
     });
 }
-
+document.getElementById('credits').addEventListener('click', function(e){
+    Swal.fire({
+        title: "Avtor: Gašper Manfreda",
+        text:" Razred: 4.RA",
+        icon: "info",
+        customClass:{
+            confirmButton: 'ok_button'
+        }
+      });
+});
 
 
 document.getElementById('form').addEventListener('submit', function(e){
@@ -108,7 +117,8 @@ function valid_tel_stevilka(input, message){
         document.getElementById(message).textContent = '';
         return true;
     }
-}function valid_email(input, message){
+}
+function valid_email(input, message){
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(document.getElementById(input).value.trim().length===0){
         document.getElementById(message).textContent = 'To polje ne sme biti prazno';
