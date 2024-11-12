@@ -64,7 +64,7 @@ document.getElementById('form').addEventListener('submit', function(e){
     valid_email('e-posta', 'message_mail');
     isEmpty('davcna_st', 'message_davcna');
     isEmpty('st_police', 'message_polica');
-    isEmpty('vrsta_zavarovanja', 'message_vrsta');
+    valid_dropdwn('zavarovanje', 'message_vrsta');
     valid_datum('datum', 'message_datum');
     isEmpty('kraj_datum','message_kraj' );
     valid_datum('datum2', 'message_datum2');
@@ -73,7 +73,7 @@ document.getElementById('form').addEventListener('submit', function(e){
     if(isEmpty('zavarovanec', 'message_zavarovanec')&&isEmpty('naslov_sklenitelja', 'message_sklenitelj')&&
     valid_tel_stevilka('tel_stevilka', 'message_tel')&&valid_email('e-posta', 'message_mail')&&
     isEmpty('davcna_st', 'message_davcna')&&isEmpty('st_police', 'message_polica')&&
-    isEmpty('vrsta_zavarovanja', 'message_vrsta')&&valid_datum('datum', 'message_datum')&&
+    valid_dropdwn('zavarovanje', 'message_vrsta')&&valid_datum('datum', 'message_datum')&&
     isEmpty('kraj_datum','message_kraj' )&&valid_datum('datum2', 'message_datum2')){
         Swal.fire({
         title: "Zahtevek vspešno oddan!",
@@ -82,9 +82,9 @@ document.getElementById('form').addEventListener('submit', function(e){
             confirmButton: 'ok_button'
         }
       });
+      document.getElementById('form').reset()
     }
 });
-
 function isEmpty(input, message){
     if(document.getElementById(input).value.trim() === ""){
         document.getElementById(input).classList.add('invalid');
@@ -140,7 +140,20 @@ function valid_email(input, message){
 }
 function valid_datum(input, message){
     if(document.getElementById(input).value.trim().length===0){
-        document.getElementById(message).textContent = 'Vnesi usterezen datum';
+        document.getElementById(message).textContent = 'Vnesi ustrezen datum';
+        document.getElementById(input).classList.add('invalid');
+        scrollToElement(document.getElementById(input));
+        return false; 
+    }
+    else{
+        document.getElementById(input).classList.remove('invalid');
+        document.getElementById(message).textContent = '';
+        return true;
+    }
+}
+function valid_dropdwn(input, message){
+    if(document.getElementById(input).value.trim()==='empty'){
+        document.getElementById(message).textContent = 'Izberi vrsto zavarovanja';
         document.getElementById(input).classList.add('invalid');
         scrollToElement(document.getElementById(input));
         return false; 
