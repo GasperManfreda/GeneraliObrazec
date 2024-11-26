@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="slike/icon.ico">
+    <link rel="icon" href="img/icon.ico">
     <title>Generali</title>
 </head>
 <body>
@@ -104,14 +104,14 @@
             </div>
             <div class="group">                
                 <label for="zavarovanec">Spodaj podpisani - zavarovanec <p class="zvezdica"> *</p></label>
-                <input type="text" id="zavarovanec" class="input-field">
+                <input type="text" id="zavarovanec" class="input-field" maxlength="30">
             </div>  
             <div class="message">
                 <p id="message_sklenitelj"></p>
             </div>
             <div class="group">
                 <label for="naslov_sklenitelja">Naslov sklenitelja zavarovanja<p class="zvezdica"> *</p></label>
-                <input type="text" id="naslov_sklenitelja" class="input-field">
+                <input type="text" id="naslov_sklenitelja" class="input-field" maxlength="30">
             </div>
             <div class="message">
                 <p id="message_tel"></p>
@@ -132,14 +132,14 @@
             </div> 
             <div class="group">
                 <label for="davcna_st">Davčna številka zavarovanca<p class="zvezdica"> *</p></label>
-                <input type="number" id="davcna_st" class="input-field" oninput="this.value=this.value.slice(0,9)">
+                <input type="number" id="davcna_st" class="input-field"  oninput="this.value=this.value.slice(0,8)">
             </div>
             <div class="message">
                 <p id="message_polica"></p>
             </div>
             <div class="group">
                 <label for="st_police">Številka police<p class="zvezdica"> *</p></label>
-                <input type="number" id="st_police" class="input-field" oninput="this.value=this.value.slice(0,9)">
+                <input type="number" id="st_police" class="input-field"  oninput="this.value=this.value.slice(0,15)">
             </div>
             <div class="message">
                 <p id="message_vrsta"></p>
@@ -166,7 +166,7 @@
             <div class="list">                
                 <div class="group1">
                     <label>1. Nov naslov sklenitelja zavarovanja</label>
-                    <input type="text" name="naslov" class="input1" id="nov_naslov">
+                    <input type="text" name="naslov" class="input1" id="nov_naslov" maxlength="30">
                 </div>        
                 <div class="group1">
                     <label>2. Sprememba plačila na</label>
@@ -198,7 +198,7 @@
                 </div>       
                 <div class="group1">
                     <label>4. Sprememba višine premije</label>
-                    <input type="text" name="visina_premije" class="input1" id="visina_premije">
+                    <input type="text" name="visina_premije" class="input1" id="visina_premije" maxlength="30">
                 </div>        
                 <div class="group1">
                     <label>5. Sprememba upravičenca</label>
@@ -216,18 +216,18 @@
                 <table>
                     <tr>
                         <td>Upravičenci (ime/ priimek)</td>
-                        <td width="5%">%</td>
+                        <td width="7%">%</td>
                         <td >EMŠO</td>
                         <td width="35%">Naslov</td>
                         <td width="20%">Davčna številka</td>
                         <td>Preklicno/ne preklicno</td>
                     </tr>
                     <tr>
-                        <td><input type="text"></td>
-                        <td><input type="number" oninput="this.value=this.value.slice(0,9)"></td>
-                        <td><input type="number" oninput="this.value=this.value.slice(0,9)"></td>
-                        <td><input type="text"></td>
-                        <td><input type="number" oninput="this.value=this.value.slice(0,9)"></td>
+                        <td><input type="text" maxlength="20"></td>
+                        <td><input type="number" oninput="this.value=this.value.slice(0,3)" ></td>
+                        <td><input type="number" oninput="this.value=this.value.slice(0,13)"></td>
+                        <td><input type="text" maxlength="20"></td>
+                        <td><input type="number" oninput="this.value=this.value.slice(0,8)"></td>
                         <td>
                             <div class="radio_div">
                                 <label class="radio_p">
@@ -240,11 +240,11 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="text"></td>
-                        <td><input type="number" oninput="this.value=this.value.slice(0,9)"></td>
-                        <td><input type="number" oninput="this.value=this.value.slice(0,9)"></td>
-                        <td><input type="text"></td>
-                        <td><input type="number" oninput="this.value=this.value.slice(0,9)"></td>
+                        <td><input type="text" maxlength="20"></td>
+                        <td><input type="number" oninput="this.value=this.value.slice(0,3)"></td>
+                        <td><input type="number" oninput="this.value=this.value.slice(0,13)"></td>
+                        <td><input type="text" maxlength="20"></td>
+                        <td><input type="number" oninput="this.value=this.value.slice(0,8)"></td>
                         <td>
                             <div class="radio_div">
                                 <label class="radio_p">
@@ -290,7 +290,7 @@
                 </div>
                 <br>
                 <label>Kraj in datum:<p class="zvezdica"> *</p></label>
-                <input type="text" id="kraj_datum">
+                <input type="text" id="kraj_datum" maxlength="20">
                 <input type="date" name="datum" id="datum2">
             </div>
             <div id="podpis">

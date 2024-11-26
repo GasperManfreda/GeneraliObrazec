@@ -47,7 +47,7 @@ function scrollToElement(input){
 document.getElementById('credits').addEventListener('click', function(e){
     Swal.fire({
         title: "Avtor: Gašper Manfreda",
-        text:" Razred: 4.RA",
+        html:" Razred: 4.RA <br> ERŠ Nova Gorica",
         icon: "info",
         customClass:{
             confirmButton: 'ok_button'
